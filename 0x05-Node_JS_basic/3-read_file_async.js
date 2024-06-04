@@ -5,7 +5,7 @@ function splitData(data) {
   const lines = data.split('\n');
   return {
     header: lines[0].split(','),
-    rows: lines.slice(1, -1)
+    rows: lines.slice(1, -1),
   };
 }
 

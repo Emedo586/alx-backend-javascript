@@ -3,10 +3,10 @@ const fs = require('fs');
 module.exports = function countStudents(path) {
   try {
     // read data
-    const data = datafs.readFileSync(path, { encoding: 'utf-8' });
+    const data = fs.readFileSync(path, { encoding: 'utf-8' });
     const lines = data.split('\n').slice(1, -1);
     // give the header of without header
-    // split data and taking only list 
+    // split data and taking only list
     const header = data.split('\n').slice(0, 1)[0].split(',');
     // find firstname and field index
     const idxFn = header.findIndex((ele) => ele === 'firstname');
